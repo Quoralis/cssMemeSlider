@@ -89,6 +89,7 @@ input[type =radio] {
     display: flex;
     gap: 15px;
     margin-bottom: 1rem;
+    margin-top: 0.4rem;
     z-index: 100;
 }
 
@@ -125,11 +126,17 @@ h1 {
     .bar {
         width: 0.6rem;
         height: 0.6rem;
+        margin-top: 0.6rem;
     }
+
 }
 @media (max-width: 500px) {
     .slider-container {
         justify-items: center;
+    }
+    h1 {
+        font-size: 0.8rem; /* Уменьшенный размер шрифта для экранов до 768px */
+        margin-top: 1.6rem;
     }
 
 }
