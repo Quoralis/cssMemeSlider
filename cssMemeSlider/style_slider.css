@@ -111,9 +111,11 @@ input[type =radio] {
     opacity: 0.8;
     transform: scale(1.2);
     background-color: white;
-    border: 2px solid white;
+    border: 0.1em solid white;
 }
-
+.bar:active {
+    background-color: gold;
+}
 
 h1 {
     font-family: Avenir, Helvetica, Arial, sans-serif;
