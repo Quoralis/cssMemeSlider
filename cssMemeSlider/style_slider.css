@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #4C4C4C;
+}
+
+main {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider-wrapper {
+    width: 67%;
+    display: flex;
+    flex-direction: column;
+    /*align-items: end;*/
+}
+
+
+.slider-container {
+    max-width: 400%;
+    max-height: 100%;
+    display: grid;
+    overflow: hidden;
+    margin: 2em auto;
+    justify-items: end;
+}
+
+.sliders {
+    display: flex;
+    width: 100%;
+    max-height: 100%;
+    transition: all 1s ease;
+}
+
+input[type =radio] {
+    display: none;
+}
+
+.slider-field {
+    min-width: 100%;
+
+}
+
+.slider-field img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+
+}
+
+#r1:checked ~ .sliders {
+    transform: translateX(0);
+}
+
+#r2:checked ~ .sliders {
+    transform: translateX(-100%);
+}
+
+#r3:checked ~ .sliders {
+    transform: translateX(-200%);
+}
+
+#r4:checked ~ .sliders {
+    transform: translateX(-300%);
+}
+
+#r1:checked ~ .navigation label[for="r1"],
+#r2:checked ~ .navigation label[for="r2"],
+#r3:checked ~ .navigation label[for="r3"],
+#r4:checked ~ .navigation label[for="r4"] {
+    background-color: transparent;
+}
+.navigation {
+    display: flex;
+    gap: 1em;
+    margin:0.4rem 0.1rem 1rem 0;
+    z-index: 100;
+}
+.clickable-area {
+    padding: 1rem 0 1rem 0;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+
+}
+.class {
+    padding: 1rem; ;
+}
+
+.bar {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    border: 0.1em solid cornflowerblue;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    background-color: cornflowerblue;
+    margin:1rem 0  0;
+    display: flex;
+    align-items: center;
+}
+
+.bar:hover {
+    opacity: 0.8;
+    transform: scale(1.2);
+    background-color: white;
+    border: 0.1em solid white;
+}
+.bar:active {
+    background-color: gold;
+}
+
+h1 {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    margin-top: 1rem;
+    z-index: 1;
+}
+
+
+@media (max-width: 900px) {
+    h1 {
+        font-size: 0.8rem; /* Уменьшенный размер шрифта для экранов до 768px */
+        margin-top: 0.6rem;
+    }
+    .bar {
+        width: 0.6rem;
+        height: 0.6rem;
+        margin-top: 0.6rem;
+    }
+
+}
+@media (max-width: 500px) {
+    .slider-container {
+        justify-items: center;
+    }
+    h1 {
+        font-size: 0.8rem; /* Уменьшенный размер шрифта для экранов до 768px */
+        margin-top: 1.6rem;
+    }
+
+}
